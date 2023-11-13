@@ -1,8 +1,12 @@
-class MyClass:
-    def __init__(self, name):
-        self.var = 1
+class Greet:
+    def __init__(self, name, new_user: bool = False):
+        self.newbie = new_user
         self.name = name
 
     def say_hi(self):
-        return 'Hi, ' + self.name
+        if self.newbie == True:
+           greet = 'Welcome'
+        else:
+           greet = 'Hi'
+        return greet + self.name
 
